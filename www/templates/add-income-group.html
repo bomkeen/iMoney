@@ -1,0 +1,22 @@
+<ion-view view-title="หมวดหมู่ค่าใช้จ่าย">
+  <ion-content>
+    <div class="item item-input-inset">
+      <label class="item-input-wrapper">
+        <input type="text" placeholder="รายการ" ng-model="$parent.item.name">
+      </label>
+      <button class="button icon ion-ios-plus button-small" ng-click="add()">
+        เพิ่ม
+      </button>
+    </div>
+
+    <div class="list">
+      <a class="item item-icon-left item-divider">
+        <i class="icon ion-ios-paper-outline assertive"></i>
+        รายการหมวดหมู่ค่าใช้จ่าย
+      </a>
+      <a class="item" href="#" ng-repeat="i in items" ng-click="confirmRemove(i.id)">
+        {{ i.name }}
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

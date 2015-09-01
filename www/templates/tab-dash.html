@@ -1,0 +1,26 @@
+<ion-view view-title="Dashboard">
+  <ion-content>
+    <div class="list card">
+      <div class="item item-divider item-icon-left">
+        <i class="icon ion-ios-pie balanced"></i>
+        สรุปค่าใช้จ่าย
+      </div>
+      <div class="item item-body">
+        <div>
+          <canvas id="pie" class="chart chart-doughnut" data="data"
+                  labels="labels"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">รายการ</div>
+
+      <a class="item item-icon-left" href="#" ng-repeat="(index,l) in list">
+        {{ index+1 }} <i class="icon ion-cash balanced"></i>
+        {{ l.id }} {{ l.desc }}
+        <span class="badge badge-assertive">{{ l.price | number:2 }}</span>
+      </a>`
+
+    </div>
+  </ion-content>
+</ion-view>

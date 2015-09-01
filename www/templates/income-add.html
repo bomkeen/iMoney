@@ -1,0 +1,41 @@
+<ion-view view-title="เพิ่มรายได้">
+
+  <ion-content>
+    <div class="list padding">
+      <div class="item item-input">
+        <div class="input-label">
+          วันที่
+        </div>
+        <input type="date" ng-model="$parent.date"/>
+      </div>
+      <div class="item item-input item-select">
+        <div class="input-label">
+          รายได้
+        </div>
+        <select ng-model="$parent.income.incomeGroup" ng-options="item as item.name for item in incomes"></select>
+      </div>
+      <div class="item item-input">
+        <div class="input-label">
+          รายการ
+        </div>
+        <input type="text" placeholder="รายการ" ng-model="$parent.desc"/>
+      </div>
+      <div class="item item-input">
+        <div class="input-label">
+          จำนวนเงิน
+        </div>
+        <input type="number" placeholder="0.00" ng-model="$parent.price"/>
+      </div>
+    </div>
+    <div class="button-bar padding">
+      <button class="button button-balanced button-full" ng-click="doAdd()">บันทึก</button>
+      <button class="button button-full" ng-click="goBack()">ยกเลิก</button>
+    </div>
+
+    <div class="card" >
+      <div >
+      {{ res }}
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

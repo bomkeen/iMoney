@@ -1,0 +1,23 @@
+<ion-view view-title="Payment">
+  <ion-nav-buttons side="right">
+    <a class="button button-clear" ui-sref="tab.payment-add">
+      <i class="icon ion-ios-cloud-download-outline"></i>
+    </a>
+  </ion-nav-buttons>
+
+  <ion-content>
+    <div class="list" >
+      <div class="item" ng-repeat="list in items" ng-click="popUp()">
+        <span >{{list.id}}</span>
+        <span >{{list.name}}</span>
+        <span ><span class="badge badge-balanced">{{ list.pay | number:0}}</span></span>
+      </div>
+    </div>
+  </div>
+  </ion-content>
+</ion-view>
+
+
+/////
+controller ->  PaymentAddCtrl.js
+view -> payment-add.html
